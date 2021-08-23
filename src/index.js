@@ -7,3 +7,6 @@ const divRoot = document.querySelector('#root')
 
 ReactDOM.render( <FindYourPokemon />, divRoot );
 
+
+
+
