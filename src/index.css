@@ -1,13 +1,223 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, #root{
+  margin:0;
+}
+
+
+.linea{
+  border:none;
+  box-shadow: #d8d8da 0 0 0 1px;
+  width: 85%;
+}
+
+input {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: #d8d8da 0 0 0 1px;
+  color: #014f86;
+}
+
+div {
+  margin: 20px;
+  text-align:center;
+  margin: 0;
+}
+
+.titulo{
+  color: #ffc300;
+  font-size: 40px;
+  text-shadow: -1px 0 #014f86, 0 1px #014f86, 1px 0 #014f86, 0 -1px #014f86;
+  
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top:0;
+}
+
+.container > .izquierda, .container > .derecha  {
+  margin:0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.derecha{
+  border-radius: 20px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  
+}
+
+/* .pokemon {
+  height: 380px;
+} */
+
+.nombre{
+  margin: 0;
+  color: #272932;
+  padding: 20px;
+  font-size: 40px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+h3{
+  text-align: center;
+  padding-top: 0;
+  margin: 0px;
+  color: #272932;
+}
+
+.abilities, .infoExtra{
+  margin:10px;
+}
+
+.abilities, .infoExtra{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.abilities > .ability{
+  background: #E7ECEF;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
+  color:#272932;
+}
+
+.infoExtra .talla, .infoExtra .peso, .infoExtra .baseExp{
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
+}
+
+.infoExtra >.talla, .infoExtra > .peso, .infoExtra > .baseExp{
+  padding: 0px;
+  margin: 20px;
+  text-align: center;
+}
+
+.talla h4, .peso h4, .baseExp h4{
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: #272932;
+}
+
+.talla div, .peso div, .baseExp div{
+  margin: 10px;
+  background: #E7ECEF;
+  padding:10px;
+  border-radius: 10px;
+  color:#272932;
+}
+
+.errorTitulo{
+  color: #f05d5e;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.errorMensaje{
+  color: #f05d5e;
+  font-size: 15px;
+}
+
+::placeholder {
+  /* color: #014f86; */
+  color: rgba(1, 79, 134,0.6)
+  
+}
+.colums{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.containerAllPokemons{
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.containerPokemons{
+  border-radius: 20px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top:0;
+  padding: 25px;
+}
+
+.izquierdaPokemons, .derechaPokemons{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nameAllPokemon {
+  color:#272932;
+}
+
+.imgAllPokemon {
+  width: 170px;
+  height: 170px;
+}
+
+.nombreDelTipo{
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.containerType{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.typeAllPokemon{
+  margin: 5px;
+  background: #E7ECEF;
+  padding:10px;
+  border-radius: 10px;
+  color:#272932;
+}
+
+@media (max-width: 1024px) {
+  .containerAllPokemons{
+    width: 45%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .containerAllPokemons{
+    width: 80%;
+  }
 }
